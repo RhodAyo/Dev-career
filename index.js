@@ -44,24 +44,31 @@ const wordToRedact = () => {
   const rr = scramble.split(/\s+/).filter((word) => word.trim() !== "");
   console.log(rr);
 
-  const selectedOption = options.value;
-  let regexp = /\dog\b/g;
-  if (selectedOption === "asterisk") {
-    unscrambledTexts = unscrambledText.value.replace(scramble, "****");
-    scrambledText.innerHTML = unscrambledTexts;
-  } else if (selectedOption === "question") {
-    unscrambledTexts = unscrambledText.value.replace(/\the\b/g, "????");
-    scrambledText.innerHTML = unscrambledTexts;
-  } else if (selectedOption === "xs") {
-    unscrambledTexts = unscrambledText.value.replace(/\the\b/g, "xxxxxx");
-    scrambledText.innerHTML = unscrambledTexts;
-  } else if (selectedOption === "dash") {
-    unscrambledTexts = unscrambledText.value.replace(/\the\b/g, "------");
-    scrambledText.innerHTML = unscrambledTexts;
-  } else {
-    unscrambledTexts = unscrambledText.value;
-    scrambledText.innerHTML = unscrambledTexts;
-    // Reset the input if no specific option is selected
-  }
+  rr.forEach((word) => {
+    if (words.includes(word)) {
+      let regexText = new RegExp(word, "gi");
+      // redact = unscrambledText.replace(regexText, options.value);
+
+      const selectedOption = options.value;
+      if (selectedOption === "asterisk") {
+        unscrambledTexts = unscrambledText.value.replace(regexText, "*****");
+        scrambledText.innerHTML = unscrambledTexts;
+      } else if (selectedOption === "question") {
+        unscrambledTexts = unscrambledText.value.replace(regexText, "????");
+        scrambledText.innerHTML = unscrambledTexts;
+      } else if (selectedOption === "xs") {
+        unscrambledTexts = unscrambledText.value.replace(regexText, "xxxxxx");
+        scrambledText.innerHTML = unscrambledTexts;
+      } else if (selectedOption === "dash") {
+        unscrambledTexts = unscrambledText.value.replace(regexText, "------");
+        scrambledText.innerHTML = unscrambledTexts;
+      } else {
+        unscrambledTexts = unscrambledText.value;
+        scrambledText.innerHTML = unscrambledTexts;
+        // Reset the input if no specific option is selected
+      }
+    }
+  });
+
   // });
 };
