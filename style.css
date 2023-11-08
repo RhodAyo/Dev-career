@@ -62,18 +62,9 @@
        display: inline-block;
      }
   
-
-#header {
-  text-align: center;
-  /* margin-top: 10px; */
-}
-
 #wordtoscramble{
     width:130px;
     height: 30px;
-}
-label {
-  font-weight: bold;
 }
 .text{
   font-family: 'Quicksand', sans-serif;
@@ -110,43 +101,6 @@ label {
   cursor: pointer;
   border: 2px  solid #b50808c6;
 }
-#phone{
-  padding: 10px;
-    width: 80%; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.carriers{
-  margin-left: 10px;
-    cursor: pointer; 
-}
-.country-code {
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  /* width: min-content; */
-}
-
-.phone-number {
-  flex: 1;
-  padding: 20px;
-  border-radius: 25px;
-  width: 100%;
-  margin-left: 10px;
-  /* Add margin for spacing */
-}
-
-input[type="submit"] {
-  /* background-color: #4285f4; */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  /* cursor: pointer; */
-  margin-top: 10px;
-}
-
-
 footer{
      height: 10%;
    position: absolute;
@@ -188,13 +142,12 @@ footer{
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+    /* .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 20px;
-        /* margin-top: 6px; */
     }
     .img-nav{
       height: 100px;
@@ -210,6 +163,9 @@ footer{
     }
     .nav-links.active {
         display: flex;
+    } */
+    .hero-image{
+      display: none;
     }
     footer{
     height: 10%;
