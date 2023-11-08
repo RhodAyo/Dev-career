@@ -1,11 +1,5 @@
-//const redactBtn = document.querySelector("#redactbtn");
-
 const wordsArray = [];
-
-// wordsArray.push(words);
-
 document.getElementById("redactbtn").addEventListener("click", (e) => {
-  // e.preventDefault();
   wordToRedact();
 });
 
@@ -46,26 +40,24 @@ const wordToRedact = () => {
 
   rr.forEach((word) => {
     if (words.includes(word)) {
-      let regexText = new RegExp(word, "gi");
-      // redact = unscrambledText.replace(regexText, options.value);
+      let regexWord = new RegExp(word, "gi");
 
       const selectedOption = options.value;
       if (selectedOption === "asterisk") {
-        unscrambledTexts = unscrambledText.value.replace(regexText, "*****");
+        unscrambledTexts = unscrambledText.value.replace(regexWord, "****");
         scrambledText.innerHTML = unscrambledTexts;
       } else if (selectedOption === "question") {
-        unscrambledTexts = unscrambledText.value.replace(regexText, "????");
+        unscrambledTexts = unscrambledText.value.replace(regexWord, "????");
         scrambledText.innerHTML = unscrambledTexts;
       } else if (selectedOption === "xs") {
-        unscrambledTexts = unscrambledText.value.replace(regexText, "xxxxxx");
+        unscrambledTexts = unscrambledText.value.replace(regexWord, "xxxx");
         scrambledText.innerHTML = unscrambledTexts;
       } else if (selectedOption === "dash") {
-        unscrambledTexts = unscrambledText.value.replace(regexText, "------");
+        unscrambledTexts = unscrambledText.value.replace(regexWord, "----");
         scrambledText.innerHTML = unscrambledTexts;
       } else {
         unscrambledTexts = unscrambledText.value;
         scrambledText.innerHTML = unscrambledTexts;
-        // Reset the input if no specific option is selected
       }
     }
   });

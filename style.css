@@ -142,29 +142,7 @@ footer{
 }
 
 @media (max-width: 768px) {
-    /* .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 20px;
-    }
-    .img-nav{
-      height: 100px;
-      font-family: 'Edu TAS Beginner', cursive;
-    }
-    .nav-links li {
-      margin-top: 3px;
-      transition: opacity 0.7s;
-    }
-
-    .nav-collapse {
-        display: block; 
-    }
-    .nav-links.active {
-        display: flex;
-    } */
-    .hero-image{
+       .hero-image{
       display: none;
     }
     footer{
