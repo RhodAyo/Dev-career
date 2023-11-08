@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDACT</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="navbar-logo">
+            <h3 alt="Brand-Name" class="text-nav">RedactMe!</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Redact Text</a></li>
+        </ul>
+        <div class="nav-collapse">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <section class="hero-image">
+            <img src="assests/redact.jpg" class="people" />
+        </section>
+        <section class="form-check">
+            <h2 class="text">Type in Sentence(s) to Scramble!</h2>
+            <textarea cols="40" rows="7" id="unscrambled"></textarea><br />
+            <div class="scambleoptions">
+                <h2 class="verify">Enter Word to Scramble!</h2>
+                <input type="text" id="wordtoscramble" />
+                <select id="options">
+                    <option>Select a format for redacting</option>
+                    <option class="asterisk" value="asterisk">****</option>
+                    <option class="question" value="question">????</option>
+                    <option class="xs" value="xs">xxxx</option>
+                    <option class="dash" value="dash">----</option>
+                </select><br />
+            </div>
+            <button class="btn-validate" id="redactbtn">Redact Now</button>
+            <div class="redact">
+                <h2 class="text">Scrambled Sentence!</h2>
+                <textarea cols="40" rows="7" id="scrambled"></textarea>
+            </div>
+            <p class="show"></p>
+            <p class="showChar"></p>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            &copy; Copyright 2023 RhodAyo. All righs reserved
+        </p>
+    </footer>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>

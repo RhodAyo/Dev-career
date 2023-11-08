@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  body{
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  .nav{
+    /* background: hsla(192, 100%, 9%, 0.913); */
+    background-color: #b50808c6;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 10%; */
+  }
+.text-nav{
+  width: 120px;
+  height: 60px;
+  font-family: 'Edu TAS Beginner', cursive;
+  color: white;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 40px;
+}
+.nav-links{
+  list-style-type: none;
+  display: flex;
+}
+.nav-links li {
+    margin-right: 20px; 
+}
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links li a:hover{
+    color: #940a0a;
+}
+
+.nav-collapse {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 5px;
+}
+     .input-container {
+       position: relative;
+       display: inline-block;
+     }
+  
+
+#header {
+  text-align: center;
+  /* margin-top: 10px; */
+}
+
+#wordtoscramble{
+    width:130px;
+    height: 30px;
+}
+label {
+  font-weight: bold;
+}
+.text{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 300;
+  margin-bottom: 15px;
+  color:  hsla(192, 100%, 9%, 0.913);
+  letter-spacing: 2px; 
+}
+.input-wrapper {
+    position: relative;
+}
+     #inputField {
+    padding: 10px;
+    width: 80%; /* Adjust the width to your preference */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-validate{
+  /* background-color: hsla(192, 100%, 9%, 0.913); */
+  background-color: #b50808c6;
+  color: white;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+}
+.btn-validate:hover{
+  color: #b50808c6;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+  border: 2px  solid #b50808c6;
+}
+#phone{
+  padding: 10px;
+    width: 80%; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.carriers{
+  margin-left: 10px;
+    cursor: pointer; 
+}
+.country-code {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  /* width: min-content; */
+}
+
+.phone-number {
+  flex: 1;
+  padding: 20px;
+  border-radius: 25px;
+  width: 100%;
+  margin-left: 10px;
+  /* Add margin for spacing */
+}
+
+input[type="submit"] {
+  /* background-color: #4285f4; */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  /* cursor: pointer; */
+  margin-top: 10px;
+}
+
+
+footer{
+     height: 10%;
+   position: absolute;
+    width: 100%;
+    background-color: #b50808c6;
+    /* background: hsla(192, 100%, 9%, 0.913); */
+    color: white;
+    font-weight: 400;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    /* z-index: 10; */
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.redact{
+    margin-top: 10px;
+}
+.scrambleoptions{
+    margin-top: 50px;
+}
+.form-check{
+    flex: 1; 
+    background-color:  #b5080837;; 
+    padding: 20px;
+    text-align: center;
+}
+.hero-image .people{
+    margin-top: 50px;
+    opacity: 70%;
+}
+.show, .showChar{
+  color: #b50808c6;;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        /* margin-top: 6px; */
+    }
+    .img-nav{
+      height: 100px;
+      font-family: 'Edu TAS Beginner', cursive;
+    }
+    .nav-links li {
+      margin-top: 3px;
+      transition: opacity 0.7s;
+    }
+
+    .nav-collapse {
+        display: block; 
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    footer{
+    height: 10%;
+    }
+}
